@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 0;
+    }
+
+    .contato-container {
+      max-width: 600px;
+      margin: 60px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .contato-container h2 {
+      text-align: center;
+      color: #1e4d2b;
+      margin-bottom: 30px;
+    }
+
+    .contato-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .contato-form input,
+    .contato-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .contato-form textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .contato-form button {
+      background-color: #1e4d2b;
+      color: white;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+
+    .contato-form button:hover {
+      background-color: #156d3c;
+    }
+
+    @media (max-width: 600px) {
+      .contato-container {
+        margin: 30px 20px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contato-container">
+    <h2>Fale Conosco</h2>
+    <form id="formContato" class="contato-form">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone / WhatsApp</label>
+      <input type="tel" id="telefone" name="telefone" required>
+
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" required></textarea>
+
+      <button type="submit">Enviar via WhatsApp</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('formContato');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const telefone = document.getElementById('telefone').value;
+      const mensagem = document.getElementById('mensagem').value;
+
+      const texto = `Olá!%0ATenho interesse em entrar em contato.%0A%0A👤 Nome: ${nome}%0A📧 Email: ${email}%0A📱 Telefone: ${telefone}%0A📝 Mensagem: ${mensagem}`;
+
+      const numero = "5561996067198";
+      const url = `https://wa.me/${numero}?text=${encodeURI(texto)}`;
+
+      window.open(url, '_blank');
+      form.reset();
+    });
+  </script>
+
+</body>
+</html>

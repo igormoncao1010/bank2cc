@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parceiros</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    :root {
+      --verde-principal: #04a69a;
+      --laranja-destaque: #f7931e;
+      --branco: #ffffff;
+      --cinza-texto: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--branco);
+      color: var(--cinza-texto);
+    }
+
+    header {
+      background-color: var(--verde-principal);
+      color: var(--branco);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .categoria {
+      padding: 50px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .categoria h2 {
+      color: var(--verde-principal);
+      font-size: 26px;
+      margin-bottom: 20px;
+      border-left: 6px solid var(--laranja-destaque);
+      padding-left: 12px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    
+
+    .parceiro-item {
+  background: var(--branco);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid var(--verde-principal);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  height: 395px; /* altura fixa para uniformidade */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .parceiro-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche todo o card mesmo com imagens diferentes */
+  display: block;
+  border-radius: 12px;
+}
+
+
+    .parceiro-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      border-top-color: var(--laranja-destaque);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background-color: var(--verde-principal);
+      color: var(--branco);
+      font-size: 14px;
+    }
+
+
+
+
+
+    @media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Mostra 1 item por linha */
+  }
+
+  .parceiro-item {
+    height: 220px; /* mais alto para preencher bem */
+    padding: 10px;
+  }
+
+  .parceiro-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preenche todo o card mesmo com imagens diferentes */
+  display: block;
+  border-radius: 12px;
+}
+
+}
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Empresas Parceiras</h1>
+</header>
+
+<!-- Lojas de Tintas -->
+<section class="categoria" data-aos="fade-up">
+  <h2>Lojas de Tintas</h2>
+  <div class="grid">
+    <div class="parceiro-item"><img src="midia/imagens/parceria/01.webp" alt="Tintas Coral"></div>
+    <div class="parceiro-item"><img src="midia/imagens/parceria/02.webp" alt="Suvinil"></div>
+  </div>
+</section>
+
+<!-- Materiais de Construção -->
+<section class="categoria" data-aos="fade-up">
+  <h2>Materiais de Construção</h2>
+  <div class="grid">
+    <div class="parceiro-item"><img src="midia/imagens/parceria/03.webp" alt="Construmil"></div>
+    <div class="parceiro-item"><img src="midia/imagens/parceria/04.webp" alt="Casa das Obras"></div>
+  </div>
+</section>
+
+<!-- Ferragens -->
+<section class="categoria" data-aos="fade-up">
+  <h2>Ferragens</h2>
+  <div class="grid">
+    <div class="parceiro-item"><img src="midia/imagens/parceria/05.jpg" alt="Ferragens Rio"></div>
+    <div class="parceiro-item"><img src="midia/imagens/parceria/06.jpg" alt="Ferragista Ideal"></div>
+  </div>
+</section>
+
+<!-- Grandes Lojas -->
+<section class="categoria" data-aos="fade-up">
+  <h2>Grandes Lojas</h2>
+  <div class="grid">
+    <div class="parceiro-item"><img src="midia/imagens/parceria/07.webp" alt="Leroy Merlin"></div>
+    <div class="parceiro-item"><img src="midia/imagens/parceria/08.jpg" alt="Telhanorte"></div>
+  </div>
+</section>
+
+<!-- Madeireiras -->
+<section class="categoria" data-aos="fade-up">
+  <h2>Madeireiras</h2>
+  <div class="grid">
+    <div class="parceiro-item"><img src="midia/imagens/parceria/09.webp" alt="Madeireira ABC"></div>
+    <div class="parceiro-item"><img src="midia/imagens/parceria/10.jfif" alt="Madeiras Verdes"></div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Bank 2CC. Todos os direitos reservados.
+</footer>
+
+<!-- AOS Animation -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+</body>
+</html>
